@@ -63,13 +63,13 @@ export class FilterComponent implements OnInit {
     )
   }
 
-  changeMinPrice(value: number) {
+  changeMinPrice() {
     // if (this.minPrice > this.maxPrice) return false;
     this.maxPriceStart = this.minPrice;
     if (this.maxPrice < this.minPrice) this.maxPrice = this.maxPriceEnd;
   }
 
-  changeMaxPrice(value: number) {
+  changeMaxPrice() {
     if (this.maxPrice < this.minPrice) return false;
   }
 
