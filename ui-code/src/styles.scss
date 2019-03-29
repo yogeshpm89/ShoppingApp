@@ -1,0 +1,49 @@
+/* You can add global styles to this file, and also import other style files */
+@import "variables.scss";
+
+h1 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: $color-black;
+    font-size: 48px;
+}
+
+h2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: $color-black;
+    font-size: 24px;
+}
+
+h3 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: $color-black;
+    font-size: 16px;
+}
+
+body {
+    background-color: $color-white;
+    font-family: sans-serif;
+    font-size: 16px;
+    color: $color-grey;
+}
+
+body .small {
+    font-size: 12px;
+    color: $color-grey;
+}
+
+.red-button {
+    background-color: $color-red;
+    border-color: $color-red;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.red-button:hover {
+    background-color: $color-red;
+    border-color: $color-red;
+}
+
+  .custom-checkbox .custom-control-input:checked~.custom-control-label::before{
+    background-color: $color-blue;
+  }

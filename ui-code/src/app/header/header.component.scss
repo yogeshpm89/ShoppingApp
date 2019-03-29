@@ -1,0 +1,44 @@
+@import "../../variables.scss";
+
+.app-header {
+    padding: 10px;
+    border: 0px solid red;
+
+    .application-name-div {
+        margin-top: 7px;
+
+        .application-name {
+            color: $color-red;
+            font-weight: bold;
+        }
+    }
+
+    .menu-item {
+        padding: 10px;
+        margin: 0px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .menu-item:hover {
+        color: $color-red;
+    }
+
+    .search-and-cart-div {
+        margin-top: 7px; 
+        float: right;
+        .search-text {
+            max-width: calc(100% - 40px);
+            height: 40px;
+            border-radius: 20px;
+        }
+
+        .cart-div {
+            margin: 10px;
+            i.fa {
+                font-size: 20px;
+            }
+        }
+    }
+}
+

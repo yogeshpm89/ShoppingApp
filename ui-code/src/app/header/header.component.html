@@ -1,0 +1,26 @@
+<div class="app-header">
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-2 application-name-div">
+        <h2 class="application-name">SHOPMATE</h2>
+      </div>
+      <div class="col-sm-6">
+        <span>
+          <div class="row">
+            <span class="menu-item" *ngFor="let item of menu">{{item}}</span>
+          </div>
+        </span>
+      </div>
+      <div class="col-sm-4 search-and-cart-div">
+        <div class="row">
+          <input type="text" class="form-control search-text" id="globalSearch" placeholder="search anything" [(ngModel)]="globalSearchText" (keyup)="onGlobalSearch($event)">
+          <span class="glyphicon glyphicon-shopping-cart"></span>
+          <span class="cart-div">
+            <i class="fa fa-shopping-bag"></i>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

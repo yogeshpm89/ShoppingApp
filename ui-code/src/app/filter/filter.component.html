@@ -1,0 +1,49 @@
+<div class="filter-class">
+
+  <div class="color-filter filter-section">
+    <h3>Color</h3>
+    <div>
+      <span *ngFor="let color of colors">
+        <div class="outer-circle" [ngClass]="{'outer': selectedColor == color}">
+          <div class="inner {{color}}"></div>
+        </div>
+      </span>
+    </div>
+  </div>
+  
+  <div class="size-filter filter-section">
+    <h3>Size</h3>
+    <div>
+      <span *ngFor="let size of sizes">
+        <div class="rectangle">
+          {{size}}
+        </div>
+      </span>
+    </div>
+  </div>
+
+  <div class="price-range-filter slidecontainer filter-section">
+    <h3>Price range</h3>
+    <label for="minRange">Min : {{minPrice}}</label>
+    <input type="range" class="custom-range" (change)="changeMinPrice()" min="{{minPriceStart}}" max="{{minPriceEnd}}" id="minRange" [(ngModel)]="minPrice">
+
+    <label for="maxRange">Max : {{maxPrice}}</label>
+    <input type="range" class="custom-range" (change)="changeMaxPrice()" min="{{maxPriceStart}}" max="{{maxPriceEnd}}" id="maxRange" [(ngModel)]="maxPrice">
+  </div>
+
+  <div class="category-filter filter-section">
+    <h3>Categories</h3>
+    <div *ngFor="let category of categories; let i = index;" class="custom-control custom-checkbox">
+      <input type="checkbox" class="custom-control-input" id="category_{{i}}" [(ngModel)]="selectedCategories[i]">
+      <label class="custom-control-label" for="category_{{i}}">{{category.name}}</label>
+    </div>
+  </div>
+
+  <div class="brand-filter filter-section">
+      <h3>Departments</h3>
+      <div *ngFor="let department of departments; let i = index;" class="custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input" id="department_{{i}}" [(ngModel)]="selectedDepartments[i]">
+        <label class="custom-control-label" for="department_{{i}}">{{department.name}}</label>
+      </div>
+    </div>
+</div>

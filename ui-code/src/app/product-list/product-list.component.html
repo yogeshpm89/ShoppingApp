@@ -1,0 +1,16 @@
+<div class="product-list-class">
+  <!-- {{productList | json}} -->
+  <div class="app-header">
+
+    <div class="container-fluid">
+      <div class="row">
+        <h1 *ngIf="!searchingFlag && (!productList || productList.length === 0)">No product found</h1>
+        <div class="col-sm-4" *ngFor="let product of productList">
+          <app-product-card [product]="product"></app-product-card>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>
