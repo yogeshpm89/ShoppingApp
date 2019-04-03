@@ -21,9 +21,16 @@ export class AppService {
   }
 
   
-  getProducts(): Observable<Object> {
+  getProducts(page = 1, limit = 20): Observable<Object> {
     const requestBody = {};
-    return this.httpClient.get(AppConstant.END_POINTS.PRODUCTS, requestBody);
+    const url = AppConstant.END_POINTS.PRODUCTS + "?page=" + page + "&limit=" + limit;
+    return this.httpClient.get(url, requestBody);
+  }
+
+  getProductDetail(productId): Observable<Object> {
+    const requestBody = {};
+    const url = AppConstant.END_POINTS.PRODUCT_DETAILS.replace('{productId}', productId);
+    return this.httpClient.get(url, requestBody);
   }
 
   searchProducts(text): Observable<Object> {

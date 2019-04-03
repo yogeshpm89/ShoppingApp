@@ -13,6 +13,11 @@ import { FilterComponent } from './filter/filter.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { Interceptor } from './http/interceptor';
 import { ProductCardComponent } from './product-card/product-card.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { ProductDetailCardComponent } from './product-detail-card/product-detail-card.component';
+import { ProductReviewsComponent } from './product-reviews/product-reviews.component';
+import { AddProductReviewComponent } from './add-product-review/add-product-review.component';
+import { ProductDetailImagesComponent } from './product-detail-images/product-detail-images.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +27,12 @@ import { ProductCardComponent } from './product-card/product-card.component';
     BodyComponent,
     FilterComponent,
     ProductListComponent,
-    ProductCardComponent
+    ProductCardComponent,
+    ProductDetailComponent,
+    ProductDetailCardComponent,
+    ProductReviewsComponent,
+    AddProductReviewComponent,
+    ProductDetailImagesComponent
   ],
   imports: [
     BrowserModule,

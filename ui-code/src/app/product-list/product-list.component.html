@@ -6,9 +6,26 @@
       <div class="row">
         <h1 *ngIf="!searchingFlag && (!productList || productList.length === 0)">No product found</h1>
         <div class="col-sm-4" *ngFor="let product of productList">
-          <app-product-card [product]="product"></app-product-card>
+          <app-product-card [product]="product" (buy)="onProductBuy(product)"></app-product-card>
         </div>
       </div>
+
+      <div *ngIf="(productList && productList.length > 0)">
+        <nav aria-label="Page navigation example">
+          <ul class="pagination justify-content-center">
+            <li class="page-item" [ngClass]="{'disabled' : page < 1}">
+              <a class="page-link" href="#" tabindex="-1" (click)="getProducts(page-1)">Previous</a>
+            </li>
+            <li class="page-item" (click)="getProducts(page)"><a class="page-link" href="#">{{page}}</a></li>
+            <li class="page-item" (click)="getProducts(page+1)"><a class="page-link" href="#">{{page+1}}</a></li>
+            <li class="page-item" (click)="getProducts(page+2)"><a class="page-link" href="#">{{page+2}}</a></li>
+            <li class="page-item">
+              <a class="page-link" (click)="getProducts(page+1)" href="#">Next</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
     </div>
   </div>
 

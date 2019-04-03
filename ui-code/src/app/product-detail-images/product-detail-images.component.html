@@ -1,0 +1,8 @@
+<div class="product-detail-images">
+  <img src="{{selectedImage}}" class="product-thumbnail" alt="...">
+  <div class="row">
+    <div class="col-sm">
+        <img *ngFor="let image of productImages" src="{{image}}" style="width:50px;" class="product-thumbnail" alt="...">
+    </div>
+  </div>
+</div>

@@ -6,6 +6,7 @@ export const AppConstant = {
         CATEGORIES: 'categories',
         ATTRIBUTES: 'attributes',
         PRODUCTS: 'products',
+        PRODUCT_DETAILS: 'products/{productId}/details',
         SEARCH_PRODUCTS: 'products/search',
         CUSTOMERS: 'customers',
         ORDERS: 'orders',

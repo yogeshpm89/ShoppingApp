@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Product } from '../models/product';
 import { AppConstant } from '../constants/app-constant';
 
@@ -10,12 +10,17 @@ import { AppConstant } from '../constants/app-constant';
 export class ProductCardComponent implements OnInit {
 
   @Input() product: Product = null;
+  @Output() buy: EventEmitter<Product> = new EventEmitter();
 
   thumbnail = "";
   constructor() { }
 
   ngOnInit() {
     this.thumbnail = AppConstant.PRODUCTS_IMAGE_URL +  this.product.thumbnail;
+  }
+
+  onBuy() {
+    this.buy.emit(this.product);
   }
 
 }

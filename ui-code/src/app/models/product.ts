@@ -6,4 +6,7 @@ export class Product {
     price: Number;
     discounted_price: Number;
     thumbnail: String;
+    image: String;
+    image_2: String;
+    image_3: String;
 }
