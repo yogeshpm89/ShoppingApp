@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CartService } from '../services/cart.service';
 import { AppService } from '../services/app.service';
 import { Cart } from '../models/cart';
+import { DialogService } from '../services/dialog.service';
 
 @Component({
   selector: 'app-cart',
@@ -12,7 +13,8 @@ export class CartComponent implements OnInit {
 
   cartItems: Cart[];
   constructor(
-    private appService: AppService
+    private appService: AppService,
+    private dialogService: DialogService
   ) { }
 
   ngOnInit() {
@@ -42,5 +44,13 @@ export class CartComponent implements OnInit {
 
   onProductQuantityPlus(item: Cart) {
     item.quantity = +item.quantity + 1;
+  }
+
+  onBackToShop() {
+    this.dialogService.hide();
+  }
+
+  onCheckout() {
+    this.dialogService.hide();
   }
 }
