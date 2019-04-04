@@ -1,3 +1,53 @@
-<p>
-  footer works!
-</p>
+<div class="footer">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-3">
+        <div>QUESTIONS?</div>
+        <div>Help</div>
+        <div>Track Order</div>
+        <div>Returns</div>
+      </div>
+
+      <div class="col-3">
+        <div>WHAT'S IN STORE</div>
+        <div>Women</div>
+        <div>Men</div>
+        <div>Product A-Z</div>
+        <div>Buy Gift Vouchers</div>
+      </div>
+
+      <div class="col-3">
+        <div>FOLLOW US</div>
+        <div>Facebook</div>
+        <div>Twitter</div>
+        <div>YouTube</div>
+      </div>
+
+      <div class="col-3">
+        <div>@2016 shopmate ltd</div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="container-fluid ">
+    <div class="row">
+      <div class="col-sm-12">
+        <span>
+          <div class="row">
+            <span class="menu-item col-sm" *ngFor="let item of menu">{{item}}</span>
+          </div>
+        </span>
+      </div>
+
+      <div class="col-sm-12 text-center">
+          <span>@2016 shopmate ltd</span>
+          <span>.</span>
+          <span>Contact</span>
+          <span>.</span>
+          <span>Privacy Policy</span>
+      </div>
+    </div>
+  </div>
+
+</div>

@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
+  menu = ["Women", "Men", "Kids", "Shoes", "Brands"];
   constructor() { }
 
   ngOnInit() {

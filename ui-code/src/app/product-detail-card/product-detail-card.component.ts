@@ -24,7 +24,6 @@ export class ProductDetailCardComponent implements OnInit {
   getProductDetails() {
     this.appService.getProductDetail(this.productId).subscribe(
       response => {
-        debugger;
         this.product = <Product> response[0];
       }
     )

@@ -43,7 +43,6 @@ export class FilterComponent implements OnInit {
   getDepartments() {
     this.appService.getDepartments().subscribe(
       response => {
-        debugger;
         this.departments = <Department[]>response;
         for (let i=0; i<this.departments.length; i++) {
           this.selectedDepartments[i] = false;
