@@ -36,7 +36,7 @@
           <input type="text" class="form-control search-text" id="globalSearch" placeholder="search anything" [(ngModel)]="globalSearchText"
             (keyup)="onGlobalSearch($event)">
           <span class="glyphicon glyphicon-shopping-cart"></span>
-          <span class="cart-div">
+          <span class="cart-div" (click)="oncart()">
             <i class="fa fa-shopping-bag"></i>
           </span>
         </div>

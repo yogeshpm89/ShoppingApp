@@ -37,7 +37,20 @@ body .small {
     border-radius: 50px;
     font-size: 14px;
     font-weight: bold;
+
+    &.inverse {
+        background-color: $color-white;
+        border-color: $color-light-grey;
+        color: $color-red;
+
+        &:hover {
+            background-color: $color-white;
+            border-color: $color-light-grey;
+            color: $color-red;
+        }
+    }
 }
+
 
 .red-button:hover, .red-button:active {
     background-color: $color-red;
@@ -56,3 +69,9 @@ body .small {
     display: none;
 }
 
+.fa {
+    &:hover {
+        color: $color-red;
+        border-color: $color-red;
+    }
+}

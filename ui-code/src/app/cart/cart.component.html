@@ -1,0 +1,49 @@
+<div class="cart">
+
+  <div class="container">
+    <div class="row header-row">
+      <div class="col-sm-5">
+        <h3>Item</h3>
+      </div>
+      <div class="col-sm-2">
+        <h3>Size</h3>
+      </div>
+      <div class="col-sm-3">
+        <h3>Quantity</h3>
+      </div>
+      <div class="col-sm-2">
+        <h3>Price</h3>
+      </div>
+    </div>
+
+    <div *ngFor="let item of cartItems" class="row table-row">
+      <div class="col-sm-5">
+        <h3>{{item.name}}</h3>
+
+        <div (click)="onRemove(item)">
+          <i class="fa fa-remove"></i><span class="remove-link">remove</span>
+        </div>
+      </div>
+      <div class="col-sm-2">
+        <h3>{{item.attributes}}</h3>
+      </div>
+      <div class="col-sm-3 quantity-div">
+        <!-- <h3>{{item.quantity}}</h3> -->
+        <div class="quantity-counter">
+          <div class="inner"><span class="fa fa-minus" (click)="onProductQuantityMinus(item)"></span></div>
+          <input type="text" class="form-control product-quantity" id="productQuantity" [(ngModel)]="item.quantity">
+          <div class="inner"><span class="fa fa-plus" (click)="onProductQuantityPlus(item)"></span></div>
+        </div>
+      </div>
+      <div class="col-sm-2">
+        <h3>{{item.price}}</h3>
+      </div>
+    </div>
+  </div>
+
+  <div class="action-button-div">
+      <button type="submit" class="btn btn-primary red-button submit-button inverse">Back to Shop</button>
+      <button type="submit" class="btn btn-primary red-button submit-button float-right">Checkout</button>
+  </div>
+
+</div>

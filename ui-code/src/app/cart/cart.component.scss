@@ -1,0 +1,63 @@
+@import '../../variables.scss';
+
+.cart {
+    .header-row {
+        border-bottom: 1px solid  $color-light-grey;
+        color: $color-grey;
+    }
+
+    .table-row {
+        padding: 10px 0px;
+
+        .fa-remove, .remove-link {
+            font-size: 12px;
+            margin: 2px;
+            cursor: pointer;
+
+            &:hover {
+                color: $color-red;
+            }
+        }
+
+        .fa-remove {
+            color: $color-red;
+        }
+
+        .quantity-div {
+            div.inner {
+                -webkit-border-radius: 50%;
+                -moz-border-radius: 50%;
+                border-radius: 50%;
+                height: 25px;
+                width: 25px;
+                margin: 1px;
+                display: inline-block;
+                color: $color-light-grey;
+                border: 1px solid $color-light-grey;
+    
+                .fa-plus, .fa-minus {
+                    padding: 6px 8px;
+                    font-size: 12px;
+                }
+    
+                &:hover {
+                    color: $color-red;
+                    border-color: $color-red;
+                }
+            }
+    
+            .product-quantity {
+                width: 50px;
+                border-radius: 25px;
+                text-align: center;
+                display: inline-block;
+                margin: 0px 2px;
+            }
+        }
+    }
+
+    .action-button-div {
+        background-color: #F7F7F7;
+        padding-top: 20px;
+    }
+}

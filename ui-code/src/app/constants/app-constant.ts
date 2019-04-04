@@ -12,6 +12,10 @@ export const AppConstant = {
         CUSTOMERS: 'customers',
         ORDERS: 'orders',
         SHOPPING_CART: 'shoppingcart',
+        GENERATE_SHOPPING_CART_ID: 'shoppingcart/generateUniqueId',
+        SHOPPING_CART_ADD: 'shoppingcart/add',
+        SHOPPING_CART_REMOVE_PRODUCT: 'shoppingcart/removeProduct/{itemId}',
+        GET_SHOPPING_CART_CONTENTS: 'shoppingcart/{cartId}',
         TAX: 'tax',
         SHIPPING: 'shipping',
         STRIPE: 'stripe'

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AppService } from '../services/app.service';
 import { GlobalSearchService } from '../services/global-search.service';
 import { DialogService } from '../services/dialog.service';
-import { DialogConfig, DialogConfigForms } from '../dialog/dialog-config';
+import { DialogConfig, DialogConfigForms, DialogSizes } from '../dialog/dialog-config';
 
 @Component({
   selector: 'app-header',
@@ -52,4 +52,12 @@ export class HeaderComponent implements OnInit {
   }
 
 
+  oncart() {
+    const diagloConfig = new DialogConfig();
+    diagloConfig.show = true;
+    diagloConfig.form = DialogConfigForms.CART;
+    diagloConfig.header = "";
+    diagloConfig.size = DialogSizes.LARGE;
+    this.dialogService.show(diagloConfig);
+  }
 }

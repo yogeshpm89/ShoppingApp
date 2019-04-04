@@ -1,3 +1,10 @@
 .modal-dialog {
     z-index: 1041;
+
+    .close {
+        right: 0;
+        position: absolute;
+        padding: 10px;
+        z-index: 1042;
+    }
 }

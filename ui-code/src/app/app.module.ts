@@ -23,6 +23,7 @@ import { LoginComponent } from './login/login.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { StarRatingComponent } from './star-rating/star-rating.component';
 import { ProductSpecificationComponent } from './product-detail-card/product-specification/product-specification.component';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { ProductSpecificationComponent } from './product-detail-card/product-spe
     SignUpComponent,
     StarRatingComponent,
     ProductSpecificationComponent,
-    ProductReviewsComponent
+    ProductReviewsComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
