@@ -1,10 +1,17 @@
 <div class="product-detail-card">
   <div *ngIf="product" class="row">
-    <div class="col-sm-6">
+    <div class="col-sm-4">
       <app-product-detail-images [product]="product"></app-product-detail-images>
     </div>
-    <div class="col-sm-6">
-      product details
+    <div class="col-sm-8">
+      <ul class="breadcrumb">
+        <li class="breadcrumb-item">Home</li>
+        <li class="breadcrumb-item">All Categories</li>
+        <li class="breadcrumb-item">Clothing</li>
+      </ul>
+
+      <app-star-rating></app-star-rating>
+      <app-product-specification [product]="product"></app-product-specification>
     </div>
   </div>
 </div>

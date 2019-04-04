@@ -1,0 +1,95 @@
+@import "../../../variables.scss";
+
+
+.product-specification {
+
+    .price {
+        color: $color-red;
+    }
+    .breadcrumb {
+        background-color: #FFFFFF;
+        padding: 0px;
+        margin: 0px;
+    }
+    .product-name-div, .price-div, .size-div, .quantity-div, .add-to-cart-div {
+        margin: 10px 0px;
+    }
+
+    .color-header, .size-header, .quantity-header {
+        color: $color-light-grey;
+    }
+
+    .colors-div {
+
+        div.inner {
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+            height: 15px;
+            width: 15px;
+            margin: 3.5px;
+            display: inline-block;
+        }
+
+        .blue { background-color: $color-blue; }
+        .red { background-color: $color-red; }
+        .orange { background-color: $color-orange; }
+        .green { background-color: $color-green; }
+        .light-green { background-color: $color-light-green; }
+    }
+
+    .size-div {
+        div.rectangle {
+            display: inline-block;
+            margin: 2px 10px 0px 0px;
+            font-weight: bold;
+            cursor: pointer;
+            padding: 2px 40px;
+            border: 1px solid $color-light-grey;
+        }
+    }
+
+    .quantity-div {
+        div.inner {
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+            height: 30px;
+            width: 30px;
+            margin: 3.5px;
+            display: inline-block;
+            color: $color-light-grey;
+            border: 1px solid $color-light-grey;
+
+            .fa-plus, .fa-minus {
+                padding: 6px 8px;
+            }
+
+            &:hover {
+                color: $color-red;
+                border-color: $color-red;
+            }
+        }
+
+        .product-quantity {
+            width: 50px;
+            border-radius: 25px;
+            text-align: center;
+            display: inline-block;
+            margin: 0px 5px;
+        }
+    }
+
+    .add-to-cart-div {
+        .fa-heart {
+            color: $color-red;
+            margin-right: 6px;
+        }
+
+        .add-to-cart-button {
+            height: 50px;
+            padding: 10px 50px;
+            font-size: 15px;
+        }
+    }
+}

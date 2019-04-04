@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Category } from '../models/category';
 import { AppService } from '../services/app.service';
 import { Department } from '../models/department';
+import { COLORS, SIZES } from '../constants/app-constant';
 
 @Component({
   selector: 'app-filter',
@@ -17,8 +18,8 @@ export class FilterComponent implements OnInit {
   selectedDepartments: Department[] = [];
 
   selectedColor = null;
-  colors = ['blue', 'red', 'orange', 'green', 'light-green'];
-  sizes = ['XS', 'S', 'M', 'L', 'XL'];
+  colors = COLORS; 
+  sizes = SIZES;
 
   minPrice = 0;
   maxPrice = 100;

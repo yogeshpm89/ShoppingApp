@@ -1,11 +1,30 @@
 <div class="app-header">
 
   <div class="container-fluid">
+
+    <div class="row" style="background-color: #F7F7F7;;">
+      <div class="col-sm-2 application-name-div">
+        <span class="float-right">
+          <button type="button" class="btn btn-link" (click)="onLogin()">Sign In</button>
+          or
+          <button type="button" class="btn btn-link" (click)="onSignup()">Register</button>
+        </span>
+      </div>
+      <div class="col-sm-10 application-name-div">
+        <span class="menu-item">Daily deals</span>
+        <span class="menu-item">Sell</span>
+        <span class="menu-item">Help & Contact</span>
+      </div>
+      <div class="col-sm-2 application-name-div">
+        <span class="float-right">
+        </span>
+      </div>
+    </div>
     <div class="row">
       <div class="col-sm-2 application-name-div">
         <h2 class="application-name">SHOPMATE</h2>
       </div>
-      <div class="col-sm-4">
+      <div class="col-sm-6">
         <span>
           <div class="row">
             <span class="menu-item" *ngFor="let item of menu">{{item}}</span>
@@ -20,17 +39,7 @@
           <span class="cart-div">
             <i class="fa fa-shopping-bag"></i>
           </span>
-
         </div>
-      </div>
-      <div class="col-sm-2 application-name-div">
-        <span class="float-right">
-            <button type="button" class="btn btn-link" (click)="onLogin()">Sign In</button>
-            or
-            <button type="button" class="btn btn-link" (click)="onSignup()">Register</button>
-        </span>
-        
-        
       </div>
     </div>
   </div>

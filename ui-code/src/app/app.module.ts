@@ -21,6 +21,8 @@ import { ProductDetailImagesComponent } from './product-detail-images/product-de
 import { DialogComponent } from './dialog/dialog.component';
 import { LoginComponent } from './login/login.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
+import { StarRatingComponent } from './star-rating/star-rating.component';
+import { ProductSpecificationComponent } from './product-detail-card/product-specification/product-specification.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,10 @@ import { SignUpComponent } from './sign-up/sign-up.component';
     ProductDetailImagesComponent,
     DialogComponent,
     LoginComponent,
-    SignUpComponent
+    SignUpComponent,
+    StarRatingComponent,
+    ProductSpecificationComponent,
+    ProductReviewsComponent
   ],
   imports: [
     BrowserModule,

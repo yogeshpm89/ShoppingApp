@@ -1,3 +1,32 @@
-<p>
-  add-product-review works!
-</p>
+<div class="add-product-review">
+    <div class="container-fluid">
+        <h2>Add a reviews</h2>
+        <div class="row">
+            <div class="col-sm-3">
+                <h3>Choose a nickname</h3>
+            </div>
+            <div class="col-sm-6">
+                <input type="text" class="form-control search-text" id="nickname">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3">
+                <h3>Your review</h3>
+            </div>
+            <div class="col-sm-6">
+                <textarea class="form-control" rows="5" id="review"></textarea>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3">
+                <h3>Overall rating</h3>
+            </div>
+            <div class="col-sm-6">
+              <app-star-rating></app-star-rating>
+              <div class="submit-button-div">
+                <button type="submit" class="btn btn-primary red-button submit-button">Submit</button>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>

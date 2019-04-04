@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { AppService } from '../services/app.service';
 import { ActivatedRoute } from '@angular/router';
 import { Product } from '../models/product';
+import { COLORS, SIZES } from '../constants/app-constant';
 
 @Component({
   selector: 'app-product-detail-card',
@@ -12,6 +13,11 @@ export class ProductDetailCardComponent implements OnInit {
 
   @Input() productId: Number;
   product:Product;
+
+  colors = COLORS;
+  sizes = SIZES;
+
+  
 
   constructor(
     private appService : AppService
@@ -29,4 +35,5 @@ export class ProductDetailCardComponent implements OnInit {
     )
   }
 
+  
 }

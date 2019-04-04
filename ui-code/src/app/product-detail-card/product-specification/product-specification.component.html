@@ -1,0 +1,52 @@
+<div class="product-specification">
+
+    <div class="product-name-div">
+        <h2>{{product.name}}</h2>
+      </div>
+
+      <div class="price-div">
+        <h2 class="price"><i class="fa fa-gbp"></i>{{product.price}}</h2>
+      </div>
+
+      <div class="colors-div">
+        <h2 class="color-header">Color</h2>
+        <div>
+          <span *ngFor="let color of colors">
+            <div class="inner {{color}}"></div>
+          </span>
+        </div>
+      </div>
+
+      <div class="size-div">
+        <h2 class="size-header">Size</h2>
+        <div>
+          <span *ngFor="let size of sizes">
+            <div class="rectangle">
+              {{size}}
+            </div>
+          </span>
+        </div>
+      </div>
+
+      <div class="quantity-div">
+        <h2 class="quantity-header">Quantity</h2>
+        <div class="quantity-counter">
+          <div class="inner"><span class="fa fa-minus" (click)="onProductQuantityMinus()"></span></div>
+          <input type="text" class="form-control product-quantity" id="productQuantity" [(ngModel)]="productQuantity">
+          <div class="inner"><span class="fa fa-plus" (click)="onProductQuantityPlus()"></span></div>
+        </div>
+      </div>
+
+      <div class="container-fluid add-to-cart-div">
+        <div class="row">
+          <div class="col-sm-4">
+              <button type="submit" class="btn btn-primary red-button add-to-cart-button">Add to cart</button>
+          </div>
+          <div class="col-sm-2"></div>
+          <div class="col-sm-4">
+              <h3 style="display: inline-block"><span class="fa fa-heart" (click)="onProductQuantityPlus()"></span>Add to Wish List</h3>
+          </div>
+          <div class="col-sm-2"></div>
+        </div>
+      </div>
+</div>

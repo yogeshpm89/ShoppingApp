@@ -39,7 +39,7 @@ body .small {
     font-weight: bold;
 }
 
-.red-button:hover {
+.red-button:hover, .red-button:active {
     background-color: $color-red;
     border-color: $color-red;
 }

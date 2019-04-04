@@ -7,6 +7,7 @@ export const AppConstant = {
         ATTRIBUTES: 'attributes',
         PRODUCTS: 'products',
         PRODUCT_DETAILS: 'products/{productId}/details',
+        PRODUCT_REVIEWS: 'products/{productId}/reviews',
         SEARCH_PRODUCTS: 'products/search',
         CUSTOMERS: 'customers',
         ORDERS: 'orders',
@@ -16,3 +17,7 @@ export const AppConstant = {
         STRIPE: 'stripe'
     }
 }
+
+
+export const COLORS = ['blue', 'red', 'orange', 'green', 'light-green'];
+export const SIZES = ['XS', 'S', 'M', 'L', 'XL'];
