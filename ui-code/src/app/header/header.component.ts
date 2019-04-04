@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { AppService } from '../services/app.service';
 import { GlobalSearchService } from '../services/global-search.service';
+import { DialogService } from '../services/dialog.service';
+import { DialogConfig, DialogConfigForms } from '../dialog/dialog-config';
 
 @Component({
   selector: 'app-header',
@@ -14,7 +16,8 @@ export class HeaderComponent implements OnInit {
 
   constructor(
     private globalSearchService: GlobalSearchService,
-    private appService: AppService
+    private appService: AppService,
+    private dialogService: DialogService
   ) { }
 
   ngOnInit() {
@@ -30,6 +33,22 @@ export class HeaderComponent implements OnInit {
       // call global search
       this.globalSearchService.globalSearch(this.globalSearchText);    
     }
+  }
+
+  onLogin() {
+    const diagloConfig = new DialogConfig();
+    diagloConfig.show = true;
+    diagloConfig.form = DialogConfigForms.LOGIN;
+    diagloConfig.header = "Sign In";
+    this.dialogService.show(diagloConfig);
+  }
+
+  onSignup() {
+    const diagloConfig = new DialogConfig();
+    diagloConfig.show = true;
+    diagloConfig.form = DialogConfigForms.SIGN_UP;
+    diagloConfig.header = "Sign Up";
+    this.dialogService.show(diagloConfig);
   }
 
 

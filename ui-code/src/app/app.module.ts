@@ -18,6 +18,9 @@ import { ProductDetailCardComponent } from './product-detail-card/product-detail
 import { ProductReviewsComponent } from './product-reviews/product-reviews.component';
 import { AddProductReviewComponent } from './add-product-review/add-product-review.component';
 import { ProductDetailImagesComponent } from './product-detail-images/product-detail-images.component';
+import { DialogComponent } from './dialog/dialog.component';
+import { LoginComponent } from './login/login.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +35,10 @@ import { ProductDetailImagesComponent } from './product-detail-images/product-de
     ProductDetailCardComponent,
     ProductReviewsComponent,
     AddProductReviewComponent,
-    ProductDetailImagesComponent
+    ProductDetailImagesComponent,
+    DialogComponent,
+    LoginComponent,
+    SignUpComponent
   ],
   imports: [
     BrowserModule,

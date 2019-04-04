@@ -5,7 +5,7 @@
       <div class="col-sm-2 application-name-div">
         <h2 class="application-name">SHOPMATE</h2>
       </div>
-      <div class="col-sm-6">
+      <div class="col-sm-4">
         <span>
           <div class="row">
             <span class="menu-item" *ngFor="let item of menu">{{item}}</span>
@@ -14,12 +14,23 @@
       </div>
       <div class="col-sm-4 search-and-cart-div">
         <div class="row">
-          <input type="text" class="form-control search-text" id="globalSearch" placeholder="search anything" [(ngModel)]="globalSearchText" (keyup)="onGlobalSearch($event)">
+          <input type="text" class="form-control search-text" id="globalSearch" placeholder="search anything" [(ngModel)]="globalSearchText"
+            (keyup)="onGlobalSearch($event)">
           <span class="glyphicon glyphicon-shopping-cart"></span>
           <span class="cart-div">
             <i class="fa fa-shopping-bag"></i>
           </span>
+
         </div>
+      </div>
+      <div class="col-sm-2 application-name-div">
+        <span class="float-right">
+            <button type="button" class="btn btn-link" (click)="onLogin()">Sign In</button>
+            or
+            <button type="button" class="btn btn-link" (click)="onSignup()">Register</button>
+        </span>
+        
+        
       </div>
     </div>
   </div>

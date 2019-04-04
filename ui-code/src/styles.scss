@@ -44,6 +44,15 @@ body .small {
     border-color: $color-red;
 }
 
-  .custom-checkbox .custom-control-input:checked~.custom-control-label::before{
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before{
     background-color: $color-blue;
-  }
+}
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+
