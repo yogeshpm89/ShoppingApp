@@ -24,6 +24,7 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { StarRatingComponent } from './star-rating/star-rating.component';
 import { ProductSpecificationComponent } from './product-detail-card/product-specification/product-specification.component';
 import { CartComponent } from './cart/cart.component';
+import { MessagesComponent } from './messages/messages.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { CartComponent } from './cart/cart.component';
     StarRatingComponent,
     ProductSpecificationComponent,
     ProductReviewsComponent,
-    CartComponent
+    CartComponent,
+    MessagesComponent
   ],
   imports: [
     BrowserModule,

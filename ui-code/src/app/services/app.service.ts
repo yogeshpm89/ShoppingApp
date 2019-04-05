@@ -72,4 +72,15 @@ export class AppService {
     const url = AppConstant.END_POINTS.SHOPPING_CART_REMOVE_PRODUCT.replace('{itemId}', '' + itemId);
     return this.httpClient.delete(url, requestBody);
   }
+
+
+  registerCutomer(name: String, email: String, password: String): Observable<Object> {
+    const requestBody = {
+      name: name,
+      email: email,
+      password: password
+    };
+    const url = AppConstant.END_POINTS.CUSTOMERS;
+    return this.httpClient.post(url, requestBody);
+  }
 }

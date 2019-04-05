@@ -1,17 +1,17 @@
 <div class="sign-up">
-    <form >
+    <form>
       <div class="form-group">
-        <input type="email" class="form-control" id="email" placeholder="Email">
+        <input type="email" name="email" class="form-control" [ngClass]="{'error': error.email}" id="email" [(ngModel)]="email" placeholder="Email">
       </div>
       <div class="form-group">
-        <input type="password" class="form-control" id="pwd" placeholder="Password">
+        <input type="password" name="password" class="form-control" [ngClass]="{'error': error.password}" id="pwd" [(ngModel)]="password" placeholder="Password">
       </div>
       <div class="form-group">
-          <input type="password" class="form-control" id="pwd1" placeholder="Re-type password">
+          <input type="password" name="password1" class="form-control" [ngClass]="{'error': error.password1}" id="pwd1" [(ngModel)]="password1" placeholder="Re-type password">
       </div>
   
       <div class="text-center">
-        <button type="submit" class="btn btn-primary red-button sign-up-button">Sign Up</button>
+        <button type="submit" class="btn btn-primary red-button sign-up-button" (click)="onSignUp()">Sign Up</button>
       </div>
   
       <div class="sign-up-links text-center">
