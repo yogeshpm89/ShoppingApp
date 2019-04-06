@@ -1,17 +1,27 @@
 import { Injectable } from '@angular/core';
 import { Cart } from '../models/cart';
+import { Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CartService {
 
-  private cartId: String;
+  private cartId: string;
   cartList: Cart[];
 
   constructor() { }
 
-  setCartId(id: String) {
+  private updatedCart = new Subject<Cart[]>();
+  updatedCartSource$ = this.updatedCart.asObservable();
+
+
+  updateCartInUI(cartList: Cart[]) {
+    this.cartList = cartList;
+    this.updatedCart.next(cartList);
+  }
+
+  setCartId(id: string) {
     this.cartId = id;
   }
 

@@ -1,44 +1,82 @@
 @import "../../variables.scss";
 
 .app-header {
+  padding: 10px;
+  border: 0px solid red;
+  background-color: $color-light-grey2;
+  padding:0px; margin: 0px;
+  .container {
+    padding: 0px;
+    margin: 0px;
+  }
+
+  .header1 {
+    padding:0px; margin: 0px;
+  }
+  .header-container {
+    height: auto;
+    padding:0px; margin: 0px;
+    background-color: $color-light-grey2;
+  }
+
+  .application-name-div {
+    margin-top: 7px;
+
+    .application-name {
+      color: $color-red;
+      font-weight: bold;
+    }
+  }
+
+  .header2 {
+    padding:10px 0px; margin: 0px;
+    background-color: $color-white;
+
+    .row {
+      margin: 0px -25px;
+      padding: 0px;
+    }
+  }
+
+  .menu-item {
     padding: 10px;
-    border: 0px solid red;
+    margin: 0px;
+    font-weight: bold;
+    min-width: 100px;
+    max-width: 200px;
+    cursor: pointer;
+  }
 
-    .application-name-div {
-        margin-top: 7px;
+  .menu-item:hover {
+    color: $color-red;
+  }
 
-        .application-name {
-            color: $color-red;
-            font-weight: bold;
-        }
+  .search-and-cart-div {
+    margin-top: 7px;
+    float: right;
+    .search-text {
+      max-width: calc(100% - 60px);
+      height: 40px;
+      border-radius: 20px;
     }
 
-    .menu-item {
-        padding: 10px;
-        margin: 0px;
-        font-weight: bold;
-        cursor: pointer;
-    }
+    .cart-div {
+      margin: 10px;
 
-    .menu-item:hover {
-        color: $color-red;
-    }
+      .badge-notify {
+        background: red;
+        position: relative;
+        top: -18px;
+        left: 26px;
+        border: 1px solid red;
+        border-radius: 50%;
+        color: white;
+        width: auto;
+      }
 
-    .search-and-cart-div {
-        margin-top: 7px; 
-        float: right;
-        .search-text {
-            max-width: calc(100% - 40px);
-            height: 40px;
-            border-radius: 20px;
-        }
-
-        .cart-div {
-            margin: 10px;
-            i.fa {
-                font-size: 20px;
-            }
-        }
+      i.fa {
+        font-size: 20px;
+      }
     }
+  }
 }
-

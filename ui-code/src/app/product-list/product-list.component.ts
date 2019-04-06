@@ -15,13 +15,13 @@ export class ProductListComponent implements OnInit {
   productList: Product[] = [];
 
   page = 1;
-  limit = 6;
+  limit = 12;
   paginationPageCount = 10;
 
   constructor(
     private router: Router,
     private globalSearchService: GlobalSearchService,
-    private appService: AppService) { 
+    private appService: AppService) {
       this.globalSearchService.globalSearchSource$.subscribe(
         gloalSearchText => {
           if (!gloalSearchText) {
@@ -47,7 +47,7 @@ export class ProductListComponent implements OnInit {
       }
     )
   }
-  
+
 
   searchProducts(text) {
     this.searchingFlag = true;

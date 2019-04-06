@@ -1,4 +1,13 @@
+@import "../../variables.scss";
 
 .product-detail-card {
-    padding: 20px;
+  margin: 20px;
+  background-color: $color-white;
+  border: 0.5px solid $color-light-grey;
+  padding-bottom: 20px;
+  .breadcrumb {
+    background-color: $color-white;
+    padding-left: 0px;
+    margin: 2px 0px;
+  }
 }

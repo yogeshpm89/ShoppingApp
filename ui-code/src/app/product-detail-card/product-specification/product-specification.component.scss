@@ -38,7 +38,7 @@
             border: 1px solid $color-light-grey;
             margin: 5px;
         }
-        
+
         div.outer-circle {
             display: inline-block;
             height: 25px;
@@ -100,6 +100,7 @@
     }
 
     .add-to-cart-div {
+        padding-left: 0px;
         .fa-heart {
             color: $color-red;
             margin-right: 6px;
@@ -109,6 +110,7 @@
             height: 50px;
             padding: 10px 50px;
             font-size: 15px;
+            width: 200px;
         }
     }
 }

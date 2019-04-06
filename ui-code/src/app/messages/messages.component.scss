@@ -1,0 +1,16 @@
+.message-container {
+  top: 0px;
+  position: fixed;
+  width: 300px;
+  right: 0px;
+  z-index: 1051;
+  padding: 10px;
+  .toast-message {
+    z-index: 1050;
+    position: relative;
+    width: 300px;
+    float: right;
+    top: 0px;
+    right: 0px;
+  }
+}

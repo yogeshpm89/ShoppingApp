@@ -1,0 +1,11 @@
+@import '../../variables.scss';
+
+.product-detail {
+  background-color: $color-light-grey2;
+
+  // background-color: red;
+  padding-top: 5px;
+  .panel {
+    margin: 0px;
+  }
+}

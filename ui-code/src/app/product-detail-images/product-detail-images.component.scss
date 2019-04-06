@@ -1,8 +1,14 @@
+@import '../../variables.scss';
+
 .product-detail-images {
     padding: 20px;
     text-align: center;
 
     .product-thumbnail {
         margin: 10px;
+
+        &.small {
+          border: 1px solid $color-red;
+        }
     }
 }

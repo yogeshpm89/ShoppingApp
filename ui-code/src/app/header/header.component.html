@@ -1,16 +1,20 @@
 <div class="app-header">
 
-  <div class="container-fluid">
+  <div class="container-fluid header-container">
 
-    <div class="row" style="background-color: #F7F7F7;;">
-      <div class="col-sm-2 application-name-div">
-        <span class="float-right">
-          <button type="button" class="btn btn-link" (click)="onLogin()">Sign In</button>
+    <div  class="row header1">
+      <div class="col-sm-3 application-name-div">
+          Hi!
+          <span *ngIf="loggedInUser">
+              {{loggedInUser.email}}
+          </span>
+          <span *ngIf="!loggedInUser">
+          <button type="button" class="btn btn-link font-weight-bold" (click)="onLogin()">Sign In</button>
           or
-          <button type="button" class="btn btn-link" (click)="onSignup()">Register</button>
+          <button type="button" class="btn btn-link font-weight-bold" (click)="onSignup()">Register</button>
         </span>
       </div>
-      <div class="col-sm-10 application-name-div">
+      <div class="col-sm-9 application-name-div">
         <span class="menu-item">Daily deals</span>
         <span class="menu-item">Sell</span>
         <span class="menu-item">Help & Contact</span>
@@ -20,7 +24,9 @@
         </span>
       </div>
     </div>
-    <div class="row">
+
+
+    <div class="row header2">
       <div class="col-sm-2 application-name-div">
         <h2 class="application-name">SHOPMATE</h2>
       </div>
@@ -37,6 +43,7 @@
             (keyup)="onGlobalSearch($event)">
           <span class="glyphicon glyphicon-shopping-cart"></span>
           <span class="cart-div" (click)="oncart()">
+            <span *ngIf="cartCount > 0" class="badge badge-notify">{{cartCount}}</span>
             <i class="fa fa-shopping-bag"></i>
           </span>
         </div>

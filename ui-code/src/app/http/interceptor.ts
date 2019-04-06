@@ -37,8 +37,12 @@ export class Interceptor implements HttpInterceptor {
         if (!req.url.startsWith('.')) {
             url = AppConstant.SERVER_URL + req.url;
             const cachedResponse = this.cache.get(req);
-            const headers = req.headers.set('user-key', this.loginTokenService.getToken());
 
+            let headers = req.headers;
+            const token = this.loginTokenService.getToken();
+            if (token) {
+              headers = headers.set('user-key', this.loginTokenService.getToken());
+            }
             const request = req.clone({
                 url: url,
                 headers: headers,

@@ -1,0 +1,40 @@
+@import '../../variables.scss';
+
+.product-list-class {
+
+  .p-card {
+    height: auto;
+    margin: 10px 0px;
+  }
+  .pagination-section {
+    .page-item {
+      color: $color-black;
+      cursor: pointer;
+    }
+
+    .page-link {
+      font-size: 20px;
+      background: transparent;
+      border: none;
+      color: $color-grey;
+    }
+
+
+  }
+
+  .circle {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: 1px solid grey;
+    padding: 4px 10px;
+    font-weight: bolder;
+
+    &:hover {
+      border-color: $color-red;
+    }
+  }
+
+
+
+}

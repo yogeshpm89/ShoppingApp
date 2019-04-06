@@ -10,6 +10,7 @@ export const AppConstant = {
         PRODUCT_REVIEWS: 'products/{productId}/reviews',
         SEARCH_PRODUCTS: 'products/search',
         CUSTOMERS: 'customers',
+        CUSTOMERS_LOGIN: 'customers/login',
         ORDERS: 'orders',
         SHOPPING_CART: 'shoppingcart',
         GENERATE_SHOPPING_CART_ID: 'shoppingcart/generateUniqueId',
@@ -25,3 +26,27 @@ export const AppConstant = {
 
 export const COLORS = ['blue', 'red', 'orange', 'green', 'light-green'];
 export const SIZES = ['XS', 'S', 'M', 'L', 'XL'];
+
+
+export const MESSAGES = {
+  EMPTY_EMAIL: 'Please enter email address',
+  EMPTY_PASSWORD: 'Please enter password',
+  PASSWORD_NOT_MATCH: 'Passwords are not matching',
+
+  EMPTY_NICK_NAME: 'Please enter nickname',
+  EMPTY_REVIEW: 'Please enter review',
+  EMPTY_RATING: 'Please enter rating',
+
+  SUCCESS: {
+    LOGIN: 'Login successfully',
+    ADD_CART: 'Product added to cart',
+    PRODUCT_REVIEW: 'Product review saved'
+  },
+
+  ERROR: {
+    LOGIN: 'Invalid email or password',
+    COLOR: 'Please select color',
+    SIZE: 'Please select size',
+    PRODUCT_REVIEW: 'Fail to submit product review'
+  }
+}

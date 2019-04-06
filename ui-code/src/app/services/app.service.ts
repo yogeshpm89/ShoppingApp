@@ -1,6 +1,7 @@
+import { Review } from './../models/review';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { AppConstant } from '../constants/app-constant';
 import { LocalStorageService } from './local-storage.service';
 import { CartService } from './cart.service';
@@ -41,6 +42,16 @@ export class AppService {
     return this.httpClient.get(url, requestBody);
   }
 
+  addProductReview(productId: number, review: string, rating: number): Observable<Object> {
+    const requestBody = {
+      product_id: productId,
+      review: review,
+      rating: rating
+    };
+    const url = AppConstant.END_POINTS.PRODUCT_REVIEWS.replace('{productId}', '' + productId);
+    return this.httpClient.post(url, requestBody);
+  }
+
   searchProducts(text): Observable<Object> {
     const requestBody = {};
     const url = AppConstant.END_POINTS.SEARCH_PRODUCTS + "?query_string=" + text + "&page=1&limit=20";
@@ -63,8 +74,13 @@ export class AppService {
 
   getShoppingCartContents(): Observable<Object> {
     const requestBody = {};
-    const url = AppConstant.END_POINTS.GET_SHOPPING_CART_CONTENTS.replace('{cartId}', '' + this.cartService.getCartId());
-    return this.httpClient.get(url, requestBody);
+    const cartId = this.cartService.getCartId();
+    if (!cartId) {
+      of(null);
+    } else {
+      const url = AppConstant.END_POINTS.GET_SHOPPING_CART_CONTENTS.replace('{cartId}', '' + cartId);
+      return this.httpClient.get(url, requestBody);
+    }
   }
 
   removeProductFromCart(itemId): Observable<Object> {
@@ -81,6 +97,15 @@ export class AppService {
       password: password
     };
     const url = AppConstant.END_POINTS.CUSTOMERS;
+    return this.httpClient.post(url, requestBody);
+  }
+
+  loginCustomer(email: String, password: String) : Observable<Object> {
+    const requestBody = {
+      email: email,
+      password: password
+    };
+    const url = AppConstant.END_POINTS.CUSTOMERS_LOGIN;
     return this.httpClient.post(url, requestBody);
   }
 }

@@ -18,7 +18,8 @@ export class FilterComponent implements OnInit {
   selectedDepartments: Department[] = [];
 
   selectedColor = null;
-  colors = COLORS; 
+  selectedSize = null;
+  colors = COLORS;
   sizes = SIZES;
 
   minPrice = 0;
@@ -70,7 +71,17 @@ export class FilterComponent implements OnInit {
   }
 
   changeMaxPrice() {
-    if (this.maxPrice < this.minPrice) return false;
+    if (this.maxPrice < this.minPrice) {
+      return false;
+    }
+  }
+
+  onColor(color) {
+    this.selectedColor = color;
+  }
+
+  onSize(size) {
+    this.selectedSize = size;
   }
 
 }

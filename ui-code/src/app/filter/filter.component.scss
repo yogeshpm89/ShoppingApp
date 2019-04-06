@@ -3,9 +3,10 @@
 
 .filter-section {
     border: 0.25px solid $color-light-grey;
-    box-shadow: #d3d3d3;    
+    box-shadow: #d3d3d3;
     padding: 10px;
     margin: 10px;
+    background-color: $color-white;
 }
 
 div.inner {
@@ -38,9 +39,18 @@ div.rectangle {
     cursor: pointer;
     padding: 5px 20px;
     border: 1px solid $color-light-grey;
+
+    &.selected {
+      background-color: $color-red;
+      color: $color-white;
+    }
 }
 .blue { background-color: $color-blue; }
 .red { background-color: $color-red; }
 .orange { background-color: $color-orange; }
 .green { background-color: $color-green; }
 .light-green { background-color: $color-light-green; }
+
+.color-header, .size-header, .quantity-header {
+  color: $color-light-grey;
+}

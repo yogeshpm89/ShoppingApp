@@ -1,3 +1,6 @@
 <div class="star-rating">
-    <span *ngFor="let star of starArray" class="fa fa-star checked" [ngClass]="{'checked': star.checked == true}"></span>
+    <span *ngFor="let star of starArray; let i = index;"
+      class="fa fa-star checked"
+      (mouseover)="onHover(i)"
+      [ngClass]="{'checked': (star.checked == true || i <= value)}"></span>
 </div>

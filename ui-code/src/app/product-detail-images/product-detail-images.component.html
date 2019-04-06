@@ -1,8 +1,8 @@
 <div class="product-detail-images">
-  <img src="{{selectedImage}}" class="product-thumbnail" alt="...">
+  <img src="{{selectedImage}}" class="product-thumbnail">
   <div class="row">
     <div class="col-sm">
-        <img *ngFor="let image of productImages" src="{{image}}" style="width:50px;" class="product-thumbnail" alt="...">
+        <img *ngFor="let image of productImages" src="{{image}}" style="width:50px;" class="product-thumbnail small" (click)="onSmallImage(image)">
     </div>
   </div>
 </div>

@@ -1,21 +1,21 @@
 <div class="filter-class">
 
   <div class="color-filter filter-section">
-    <h3>Color</h3>
+    <h3 class="color-header">Color</h3>
     <div>
       <span *ngFor="let color of colors">
-        <div class="outer-circle" [ngClass]="{'outer': selectedColor == color}">
+        <div class="outer-circle" [ngClass]="{'outer': selectedColor == color}" (click)="onColor(color)">
           <div class="inner {{color}}"></div>
         </div>
       </span>
     </div>
   </div>
-  
+
   <div class="size-filter filter-section">
-    <h3>Size</h3>
+    <h3 class="size-header">Size</h3>
     <div>
-      <span *ngFor="let size of sizes">
-        <div class="rectangle">
+      <span *ngFor="let size of sizes" (click)="onSize(size)">
+        <div class="rectangle" [ngClass]="{'selected': selectedSize == size}">
           {{size}}
         </div>
       </span>

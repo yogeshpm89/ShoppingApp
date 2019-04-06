@@ -12,7 +12,7 @@ export class ProductCardComponent implements OnInit {
   @Input() product: Product = null;
   @Output() buy: EventEmitter<Product> = new EventEmitter();
 
-  thumbnail = "";
+  thumbnail = '';
   constructor() { }
 
   ngOnInit() {

@@ -1,26 +1,31 @@
 <div class="product-list-class">
   <!-- {{productList | json}} -->
-  <div class="app-header">
+  <div class="">
 
     <div class="container-fluid">
       <div class="row">
         <h1 *ngIf="!searchingFlag && (!productList || productList.length === 0)">No product found</h1>
-        <div class="col-sm-4" *ngFor="let product of productList">
+        <div class="col-sm-4 p-card" *ngFor="let product of productList">
           <app-product-card [product]="product" (buy)="onProductBuy(product)"></app-product-card>
         </div>
       </div>
 
-      <div *ngIf="(productList && productList.length > 0)">
-        <nav aria-label="Page navigation example">
+      <div class="pagination-section" *ngIf="(productList && productList.length > 0)">
+        <nav aria-label="Page navigation">
           <ul class="pagination justify-content-center">
             <li class="page-item" [ngClass]="{'disabled' : page < 1}">
-              <a class="page-link" href="#" tabindex="-1" (click)="getProducts(page-1)">Previous</a>
+
+                  <span class="page-link" href="#" tabindex="-1" (click)="getProducts(page-1)">
+                      <i class="fa fa-angle-left circle"></i>
+                  </span>
             </li>
-            <li class="page-item" (click)="getProducts(page)"><a class="page-link" href="#">{{page}}</a></li>
-            <li class="page-item" (click)="getProducts(page+1)"><a class="page-link" href="#">{{page+1}}</a></li>
-            <li class="page-item" (click)="getProducts(page+2)"><a class="page-link" href="#">{{page+2}}</a></li>
+            <li class="page-item" (click)="getProducts(page)"><span class="page-link" href="#">{{page}}</span></li>
+            <li class="page-item" (click)="getProducts(page+1)"><span class="page-link" href="#">{{page+1}}</span></li>
+            <li class="page-item" (click)="getProducts(page+2)"><span class="page-link" href="#">{{page+2}}</span></li>
             <li class="page-item">
-              <a class="page-link" (click)="getProducts(page+1)" href="#">Next</a>
+              <span class="page-link" (click)="getProducts(page+1)" href="#">
+                  <i class="fa fa-angle-right circle"></i>
+                </span>
             </li>
           </ul>
         </nav>

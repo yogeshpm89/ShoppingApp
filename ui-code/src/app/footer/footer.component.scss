@@ -1,9 +1,9 @@
 @import "../../variables.scss";
 
 .footer {
-    margin: 50px 20px 20px 20px;
+    margin: 0px 20px 20px 20px;
     padding: 50px 20px 20px 20px;
-    border-top: 0.5px solid gray;
+    // border-top: 0.5px solid gray;
 
     .menu-item {
         padding: 10px;
@@ -16,5 +16,9 @@
 
     .menu-item:hover {
         color: $color-red;
+    }
+
+    h2 {
+      font-weight: normal;
     }
 }

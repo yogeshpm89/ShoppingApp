@@ -1,16 +1,15 @@
 @import '../../variables.scss';
 
 .product-card-class {
-    margin: 15px 10px;
-    padding: 5px;
-    border: 0px solid $color-grey;
+    // height: 100vh;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
+    // height: 400px;
+    background-color: $color-white;
     .card {
         padding: 10px;
         border: 0px;
     }
-    
+
     .product-thumbnail {
         width: 90%;
         margin: auto;

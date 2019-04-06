@@ -30,4 +30,8 @@ export class ProductDetailImagesComponent implements OnInit {
     }
   }
 
+  onSmallImage(image: string) {
+    this.selectedImage = image;
+  }
+
 }
