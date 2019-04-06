@@ -22,7 +22,6 @@
                 <h3>Overall rating</h3>
             </div>
             <div class="col-sm-6">
-              {{rating}}
               <app-star-rating [readonly]="false" [maxCount]="5" [value]="-1" (valueChange)="onRatingChange($event)"></app-star-rating>
               <div class="submit-button-div">
                 <button type="submit" class="btn btn-primary red-button submit-button" (click)="onReviewSubmit()">Submit</button>
