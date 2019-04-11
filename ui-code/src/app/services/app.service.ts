@@ -108,4 +108,16 @@ export class AppService {
     const url = AppConstant.END_POINTS.CUSTOMERS_LOGIN;
     return this.httpClient.post(url, requestBody);
   }
+
+
+  getRegions(): Observable<Object> {
+    const requestBody = {};
+    return this.httpClient.get(AppConstant.END_POINTS.SHIPPING, requestBody);
+  }
+
+  getShippingOptions(region): Observable<Object> {
+    const requestBody = {};
+    const url = AppConstant.END_POINTS.SHIPPING_OPTIONS.replace('{shipping_region_id}', '' + region);
+    return this.httpClient.get(url, requestBody);
+  }
 }

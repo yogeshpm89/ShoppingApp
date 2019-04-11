@@ -1,0 +1,14 @@
+@import '../../variables.scss';
+
+.checkout {
+    padding: 15px;
+
+    .form {
+        margin-top: 20px;
+    }
+
+    .action-button-div {
+        padding: 15px;
+        background-color: $color-light-grey2;
+    }
+}

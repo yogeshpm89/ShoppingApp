@@ -1,0 +1,14 @@
+<div class="checkout">
+  <h2>Checkout</h2>
+  <h3>checkout states</h3>
+
+  <app-checkout-user-form [checkoutUserForm]="checkoutUserForm" *ngIf="currentCheckoutForm == 0 && checkoutUserForm"></app-checkout-user-form>
+  <app-checkout-confirmation [orderSummary]="" [checkoutUserForm]="checkoutUserForm" *ngIf="currentCheckoutForm == 1"></app-checkout-confirmation>
+  <app-checkout-payment *ngIf="currentCheckoutForm == 2"></app-checkout-payment>
+  <app-checkout-finish *ngIf="currentCheckoutForm == 3"></app-checkout-finish>
+
+  <div class="action-button-div">
+      <button type="submit" class="btn btn-primary red-button submit-button inverse" (click)="updateForm('B')">{{buttonLabel.prev}}</button>
+      <button type="submit" class="btn btn-primary red-button submit-button float-right" (click)="updateForm('N')">{{buttonLabel.next}}</button>
+  </div>
+</div>

@@ -25,6 +25,11 @@ import { StarRatingComponent } from './star-rating/star-rating.component';
 import { ProductSpecificationComponent } from './product-detail-card/product-specification/product-specification.component';
 import { CartComponent } from './cart/cart.component';
 import { MessagesComponent } from './messages/messages.component';
+import { CheckoutComponent } from './checkout/checkout.component';
+import { CheckoutUserFormComponent } from './checkout-user-form/checkout-user-form.component';
+import { CheckoutConfirmationComponent } from './checkout-confirmation/checkout-confirmation.component';
+import { CheckoutPaymentComponent } from './checkout-payment/checkout-payment.component';
+import { CheckoutFinishComponent } from './checkout-finish/checkout-finish.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +52,12 @@ import { MessagesComponent } from './messages/messages.component';
     ProductSpecificationComponent,
     ProductReviewsComponent,
     CartComponent,
-    MessagesComponent
+    MessagesComponent,
+    CheckoutComponent,
+    CheckoutUserFormComponent,
+    CheckoutConfirmationComponent,
+    CheckoutPaymentComponent,
+    CheckoutFinishComponent
   ],
   imports: [
     BrowserModule,

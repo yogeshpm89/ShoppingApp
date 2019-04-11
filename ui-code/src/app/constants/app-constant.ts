@@ -18,7 +18,8 @@ export const AppConstant = {
         SHOPPING_CART_REMOVE_PRODUCT: 'shoppingcart/removeProduct/{itemId}',
         GET_SHOPPING_CART_CONTENTS: 'shoppingcart/{cartId}',
         TAX: 'tax',
-        SHIPPING: 'shipping',
+        SHIPPING: 'shipping/regions',
+        SHIPPING_OPTIONS: 'shipping/regions/{shipping_region_id}',
         STRIPE: 'stripe'
     }
 }
@@ -44,6 +45,8 @@ export const MESSAGES = {
   },
 
   ERROR: {
+    NO_LOGIN: 'Please login to continue',
+    NO_CART_ITEMS: 'No items in cart to checkout',
     LOGIN: 'Invalid email or password',
     COLOR: 'Please select color',
     SIZE: 'Please select size',

@@ -1,0 +1,70 @@
+<div class="checkout-user-form" *ngIf="checkoutUserForm">
+
+  <div class="container-fluid form">
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="form-group">
+          <h3 class="label" for="firstName">First name</h3>
+          <input type="text" class="form-control" name="firstName" [ngClass]="{'error': checkoutUserForm.error.firstName}" [(ngModel)]="checkoutUserForm.firstName">
+        </div>
+
+        <div class="form-group">
+          <h3 class="label" for="address">Address</h3>
+          <input type="text" class="form-control" name="firstName" [ngClass]="{'error': checkoutUserForm.error.address}" [(ngModel)]="checkoutUserForm.address">
+        </div>
+
+        <div class="form-group">
+          <h3 class="label" for="state">State</h3>
+          <input type="text" class="form-control" name="firstName" [ngClass]="{'error': checkoutUserForm.error.state}" [(ngModel)]="checkoutUserForm.state">
+        </div>
+
+        <div class="form-group">
+          <h3 class="label" for="country">Country</h3>
+          <select class="form-control" name="country" (change)="onCountryChange($event)" [ngClass]="{'error': checkoutUserForm.error.country}" [(ngModel)]="checkoutUserForm.country">
+            <option *ngFor="let c of checkoutUserForm.countryList" value="{{c.shipping_region_id}}">{{c.shipping_region}}</option>
+          </select>
+        </div>
+
+      </div>
+      <div class="col-sm-6">
+
+        <div class="form-group">
+          <h3 class="label" for="lastName">Last name</h3>
+          <input type="text" class="form-control" name="firstName" [ngClass]="{'error': checkoutUserForm.error.lastName}" [(ngModel)]="checkoutUserForm.lastName">
+        </div>
+
+        <div class="form-group">
+          <h3 class="label" for="city">City</h3>
+          <input type="text" class="form-control" name="firstName" [ngClass]="{'error': checkoutUserForm.error.city}" [(ngModel)]="checkoutUserForm.city">
+        </div>
+
+        <div class="form-group">
+          <h3 class="label" for="zip">Zip code</h3>
+          <input type="text" class="form-control" name="firstName" [ngClass]="{'error': checkoutUserForm.error.zip}" [(ngModel)]="checkoutUserForm.zip">
+        </div>
+
+      </div>
+    </div>
+
+    <div class="form-group form-check">
+      <div class="custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input" id="billing">
+        <label class="custom-control-label" for="billing">My billing information is the same as my delivery information</label>
+      </div>
+    </div>
+
+   </div>
+
+
+   <div class="delivery-option-section" *ngIf="checkoutUserForm.shippingOptionList">
+     <h2>Delivery options</h2>
+   <div class="form-group form-radio">
+      <div *ngFor="let shippingOption of checkoutUserForm.shippingOptionList" class="custom-control custom-radio custom-control-inline">
+        <input type="radio" class="custom-control-input" [(ngModel)]="checkoutUserForm.shippingRegion" id="shippingRegion_{{shippingOption.shipping_id}}" name="shippingRegion"
+          value="{{shippingOption.shipping_id}}">
+        <label class="custom-control-label" for="shippingRegion_{{shippingOption.shipping_id}}">{{shippingOption.shipping_type}}</label>
+      </div>
+    </div>
+    </div>
+
+</div>

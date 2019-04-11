@@ -1,0 +1,23 @@
+@import '../../variables.scss';
+
+.checkout-confirmation {
+    padding: 30px 15px 15px 15px;
+    .price {
+        color: $color-red;
+    }
+
+    .order-and-delivery {
+        border-bottom: 2px solid $color-light-grey2;
+    }
+
+    .delivery-section {
+        padding: 0px 20px;
+        .address-section, .delivery-option-section {
+            padding: 20px;
+        }
+    }
+
+    .summary {
+        padding: 20px;
+    }
+}

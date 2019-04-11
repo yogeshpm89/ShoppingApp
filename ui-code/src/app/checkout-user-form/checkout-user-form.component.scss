@@ -1,0 +1,26 @@
+@import '../../variables.scss';
+
+.checkout-user-form {
+    padding: 15px;
+
+    .delivery-option-section {
+        padding: 15px;
+    }
+    .form {
+        border-bottom: 2px solid $color-light-grey2;
+    }
+
+    .form-check {
+        padding-left: 0px;
+    }
+
+    .label {
+
+        color: $color-grey;
+
+        &::after{
+            content: "*";
+            font-size: 20px;
+        }
+    }
+}
