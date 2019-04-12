@@ -11,6 +11,7 @@ export class LocalStorageService {
   constructor(private appService: AppService) { }
 
   getCartId(): Observable<any> {
+    debugger;
     const cartId = window.localStorage.getItem('cartId');
     if (!cartId) {
       return this.appService.generateShoppingCartId();
@@ -21,5 +22,9 @@ export class LocalStorageService {
 
   setCartId(cartId) {
     window.localStorage.setItem('cartId', cartId);
+  }
+
+  clearCartId() {
+    window.localStorage.removeItem('cartId');
   }
 }

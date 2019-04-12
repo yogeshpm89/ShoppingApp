@@ -18,6 +18,7 @@ import { Router } from '@angular/router';
 export class CartComponent implements OnInit {
 
   cartItems: Cart[];
+  cartItemsLoaded = false;
   constructor(
     private appService: AppService,
     private dialogService: DialogService,
@@ -32,9 +33,11 @@ export class CartComponent implements OnInit {
 
   getShoppingCartContents() {
     this.cartItems = [];
+    this.cartItemsLoaded = false;
     this.appService.getShoppingCartContents().subscribe(
       response => {
         this.cartItems = <Cart[]>response;
+        this.cartItemsLoaded = true;
       }
     )
   }

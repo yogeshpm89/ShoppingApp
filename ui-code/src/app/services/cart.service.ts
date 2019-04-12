@@ -22,11 +22,22 @@ export class CartService {
   }
 
   setCartId(id: string) {
+    console.log('set cart id');
     this.cartId = id;
   }
 
   getCartId() {
+    console.log('get cart id');
     return this.cartId;
   }
 
+  getCartAmount(cartItems: Cart[]) {
+    let total = 0;
+    if (cartItems) {
+      for (let item of cartItems) {
+        total = total + +item.price * +item.quantity;
+      }
+    }
+    return total;
+  }
 }

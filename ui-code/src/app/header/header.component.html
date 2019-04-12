@@ -28,12 +28,12 @@
 
     <div class="row header2">
       <div class="col-sm-2 application-name-div">
-        <h2 class="application-name">SHOPMATE</h2>
+        <h2 [routerLink]="['/']" routerLinkActive="active" class="application-name">SHOPMATE</h2>
       </div>
       <div class="col-sm-6">
         <span>
           <div class="row">
-            <span class="menu-item" *ngFor="let item of menu">{{item}}</span>
+            <span [routerLink]="['/']" routerLinkActive="active" class="menu-item" *ngFor="let item of menu">{{item}}</span>
           </div>
         </span>
       </div>

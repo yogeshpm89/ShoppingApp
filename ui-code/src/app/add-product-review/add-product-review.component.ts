@@ -3,6 +3,7 @@ import { MESSAGES, AppConstant } from './../constants/app-constant';
 import { ToastMessage, MessageType } from './../models/message';
 import { Component, OnInit, Input } from "@angular/core";
 import { ToastMessageService } from '../services/toast-message.service';
+import { TokenService } from '../services/token.service';
 
 @Component({
   selector: "app-add-product-review",
@@ -28,7 +29,8 @@ export class AddProductReviewComponent implements OnInit {
   };
   constructor(
     private messageService: ToastMessageService,
-    private appService: AppService
+    private appService: AppService,
+    private tokenService : TokenService
   ) {}
 
   ngOnInit() {}
@@ -51,8 +53,15 @@ export class AddProductReviewComponent implements OnInit {
     }
   }
 
+  
+
   validate() {
     let flag = true;
+
+    if (!this.tokenService.checkLoggedinUser()) {
+      flag = false;
+    }
+
     if (!this.nickName) {
       this.error.nickName = true;
       flag = false;

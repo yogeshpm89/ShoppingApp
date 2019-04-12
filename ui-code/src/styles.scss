@@ -31,12 +31,19 @@ body .small {
     color: $color-grey;
 }
 
-.red-button {
-    background-color: $color-red;
-    border-color: $color-red;
-    border-radius: 50px;
-    font-size: 14px;
-    font-weight: bold;
+.red-button, .btn-primary {
+    background-color: $color-red !important;
+    border-color: $color-red !important;
+    border-radius: 50px !important;
+    font-size: 14px !important;
+    font-weight: bold !important;
+    color: $color-white !important;
+
+   
+    &:disabled {
+        background-color: $color-red;
+        border-color: $color-red;
+    }
 
     &.inverse {
         background-color: $color-white;

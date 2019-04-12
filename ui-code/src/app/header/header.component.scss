@@ -25,6 +25,7 @@
     .application-name {
       color: $color-red;
       font-weight: bold;
+      cursor: pointer;
     }
   }
 
@@ -62,6 +63,7 @@
 
     .cart-div {
       margin: 10px;
+      cursor: pointer;
 
       .badge-notify {
         background: red;

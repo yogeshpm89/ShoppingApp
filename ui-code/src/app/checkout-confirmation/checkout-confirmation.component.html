@@ -12,6 +12,13 @@
             </tr>
           </thead>
           <tbody>
+            <tr>
+              <td colspan="3" *ngIf="cartItemsLoaded && (!cartItems || cartItems.length === 0)">
+                There are not items in cart to checkout
+                <a [routerLink]="['/']" class="btn btn-primary red-button submit-button inverse"
+                routerLinkActive="active">Continue shopping</a>
+              </td>
+            </tr>
             <tr *ngFor="let item of cartItems">
               <td>
                 <h3>{{item.name}}</h3>

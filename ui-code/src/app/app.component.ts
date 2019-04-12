@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef, ViewChild, ElementRef } from '@angular/core';
 import { LocalStorageService } from './services/local-storage.service';
 import { CartService } from './services/cart.service';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -24,4 +25,7 @@ export class AppComponent  implements OnInit  {
     )
 
   }
+
+
+
 }

@@ -15,7 +15,11 @@
         <h3>Price</h3>
       </div>
     </div>
-
+    <div *ngIf="cartItemsLoaded && (!cartItems || cartItems.length === 0)" class="row table-row">
+        There are not items in cart to checkout
+        <a [routerLink]="['/']" (click)="onBackToShop()" class="btn btn-primary red-button submit-button inverse"
+        routerLinkActive="active">Continue shopping</a>
+    </div>
     <div *ngFor="let item of cartItems" class="row table-row">
       <div class="col-sm-5">
         <h3>{{item.name}}</h3>
@@ -42,7 +46,7 @@
   </div>
 
   <div class="action-button-div">
-      <button type="submit" class="btn btn-primary red-button submit-button inverse" (click)="onBackToShop()">Back to Shop</button>
+      <button [routerLink]="['/']" routerLinkActive="active" type="submit" class="btn btn-primary red-button submit-button inverse" (click)="onBackToShop()">Back to Shop</button>
       <button type="submit" class="btn btn-primary red-button submit-button float-right" (click)="onCheckout()">Checkout</button>
   </div>
 

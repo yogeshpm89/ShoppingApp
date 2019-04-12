@@ -17,10 +17,12 @@ export const AppConstant = {
         SHOPPING_CART_ADD: 'shoppingcart/add',
         SHOPPING_CART_REMOVE_PRODUCT: 'shoppingcart/removeProduct/{itemId}',
         GET_SHOPPING_CART_CONTENTS: 'shoppingcart/{cartId}',
+        GET_SHOPPING_CART_AMOUNT: 'shoppingcart/totalAmount/{cartId}',
         TAX: 'tax',
         SHIPPING: 'shipping/regions',
         SHIPPING_OPTIONS: 'shipping/regions/{shipping_region_id}',
-        STRIPE: 'stripe'
+        STRIPE: 'stripe',
+        STRIPE_CHARGE: 'stripe/charge'
     }
 }
 
@@ -50,6 +52,26 @@ export const MESSAGES = {
     LOGIN: 'Invalid email or password',
     COLOR: 'Please select color',
     SIZE: 'Please select size',
-    PRODUCT_REVIEW: 'Fail to submit product review'
+    PRODUCT_REVIEW: 'Fail to submit product review',
+    PAYMENT: 'Something went wrong, please try again'
   }
 }
+
+
+export const paymentCardStyle = {
+  base: {
+    color: 'red',
+    fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
+    fontSmoothing: 'antialiased',
+    fontSize: '16px',
+    '::placeholder': {
+      color: '#aab7c4'
+    }
+  },
+  invalid: {
+    color: '#fa755a',
+    iconColor: '#fa755a'
+  }
+}
+
+export const CARD = elements.create('card', {style: paymentCardStyle});

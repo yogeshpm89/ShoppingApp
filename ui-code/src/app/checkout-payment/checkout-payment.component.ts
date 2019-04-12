@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-checkout-payment',
@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./checkout-payment.component.scss']
 })
 export class CheckoutPaymentComponent implements OnInit {
-
+  
+ 
   constructor() { }
 
   ngOnInit() {

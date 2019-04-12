@@ -30,6 +30,8 @@ import { CheckoutUserFormComponent } from './checkout-user-form/checkout-user-fo
 import { CheckoutConfirmationComponent } from './checkout-confirmation/checkout-confirmation.component';
 import { CheckoutPaymentComponent } from './checkout-payment/checkout-payment.component';
 import { CheckoutFinishComponent } from './checkout-finish/checkout-finish.component';
+import { CheckoutStripeComponent } from './checkout-stripe/checkout-stripe.component';
+
 
 @NgModule({
   declarations: [
@@ -57,7 +59,8 @@ import { CheckoutFinishComponent } from './checkout-finish/checkout-finish.compo
     CheckoutUserFormComponent,
     CheckoutConfirmationComponent,
     CheckoutPaymentComponent,
-    CheckoutFinishComponent
+    CheckoutFinishComponent,
+    CheckoutStripeComponent
   ],
   imports: [
     BrowserModule,
