@@ -129,7 +129,6 @@ export class CheckoutComponent implements OnInit {
   }
 
   updateFormCounter(value) {
-    debugger;
     if (value === 'N') {
       this.currentCheckoutForm = this.currentCheckoutForm + 1;
     }
@@ -142,7 +141,6 @@ export class CheckoutComponent implements OnInit {
 
   onPayment(value) {
     // event.preventDefault();
-    debugger;
     stripe.createToken(this.paymentCard).then((result) => {
       if (result.error) {
         // Inform the user if there was an error.
@@ -167,8 +165,10 @@ export class CheckoutComponent implements OnInit {
     const amount = this.cartService.getCartAmount(this.cartItems);
     this.appService.stripeCharge(this.stripToken, this.orderId, this.cardHolderName, amount).subscribe(
       response => {
-        debugger;
         this.updateFormCounter(value);
+      },
+      error => {
+        this.messageService.show(new ToastMessage(MessageType.ERROR, MESSAGES.ERROR.PAYMENT));
       }
     );    
   }
