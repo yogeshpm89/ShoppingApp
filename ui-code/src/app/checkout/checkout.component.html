@@ -1,6 +1,21 @@
 <div class="checkout">
   <h2>Checkout</h2>
-  <h3>checkout states - {{currentCheckoutForm}}</h3>
+  <div>
+    <span>
+      <div class="container-fluid checkout-states">
+        <div class="row">
+          <div *ngFor="let state of checkoutStates; let i = index" class="col-sm-3">
+              <span [ngClass]="{'active-state': (i<=currentCheckoutForm)}">
+                  <div class="fa fa-circle fa-1x"></div>
+                  <div *ngIf="i < 3" class="box"></div>
+                  <h3>{{state}}</h3>
+                </span>
+          </div>
+        </div>
+      </div>
+      
+    </span>
+  </div>
 
   <app-checkout-user-form [checkoutUserForm]="checkoutUserForm" *ngIf="currentCheckoutForm == 0 && checkoutUserForm"></app-checkout-user-form>
   <app-checkout-confirmation [orderSummary]="" [cartItems]="cartItems" [cartItemsLoaded]="cartItemsLoaded" [checkoutUserForm]="checkoutUserForm" *ngIf="currentCheckoutForm == 1"></app-checkout-confirmation>

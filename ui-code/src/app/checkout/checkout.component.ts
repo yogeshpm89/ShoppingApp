@@ -30,6 +30,7 @@ export class CheckoutComponent implements OnInit {
   tax: Tax;
   taxId: number;
 
+  checkoutStates = ["Delivery", "Confimation", "Payment", "Finish"];
   currentCheckoutForm = 0;
   button = {
     next: 'Next Step',

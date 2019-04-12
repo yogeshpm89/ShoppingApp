@@ -3,6 +3,31 @@
 .checkout {
     padding: 15px;
 
+    .checkout-states {
+        .col-sm-3 {
+            padding: 0px;
+        }
+        .box {
+            height: 5px;
+            margin-left: 2px;
+            width: calc(100% - 20px);
+            background-color: grey;
+            display: inline-block;
+            margin-bottom: 3px;
+        }
+        .active-state {
+            color: $color-red;
+
+            .h3 {
+                color: $color-red;
+            }
+
+            .box {
+                background-color: $color-red;
+            }
+        }
+    }
+
     .form {
         margin-top: 20px;
     }
