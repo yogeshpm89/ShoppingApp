@@ -157,7 +157,7 @@ export class AppService {
   stripeCharge(stripeToken, orderId, description, amount): Observable<Object> {
     
     const requestBody = {
-      stripeToken: stripeToken,
+      stripeToken: stripeToken.id,
       order_id: orderId, // this.tokenService.getUser().customer_id,
       description: description,
       amount: Math.floor(amount)
